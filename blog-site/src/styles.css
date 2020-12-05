@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+}
+
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+
+main {
+    margin-left: 6rem;
+    padding: 1rem;
+}
+
+.layout-wrapper {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(30, 1fr);
+	width: 100vw;
+	height: 100vh;
+}
+
+.layout-wrapper > div {
+    background-color: #30ed7f;
+    color: black;
+    border: 1px solid black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.layout-grid-cell0 {
+	grid-column: 1 / 11;
+	grid-row: 1 / 2;
+}
+.layout-grid-cell1 {
+	grid-column: 1 / 1;
+	grid-row: 2 / 29;
+}
+.layout-grid-cell2 {
+	grid-column: 2 / 10;
+	grid-row: 2 / 29;
+}
+.layout-grid-cell3 {
+	grid-column: 10 / 11;
+	grid-row: 2 / 29;
+}
+.layout-grid-cell4 {
+	grid-column: 1 / 11;
+	grid-row: 29 / 30;
+}
