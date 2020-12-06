@@ -7,6 +7,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LeftSidebarComponent } from './components/left-sidebar/left-sidebar.component';
 import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
+import { AppRoutingModule } from './app-routing.module';
+import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
+import { Main1Component } from './components/main-pages/main1/main1.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +18,13 @@ import { MainContentComponent } from './components/main-content/main-content.com
     FooterComponent,
     LeftSidebarComponent,
     RightSidebarComponent,
-    MainContentComponent
+    MainContentComponent,
+    SiteLayoutComponent,
+    Main1Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
