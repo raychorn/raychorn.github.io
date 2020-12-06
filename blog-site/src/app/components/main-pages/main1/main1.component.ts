@@ -25,13 +25,13 @@ export class Main1Component implements OnInit {
 
   public isHome: boolean = true;
   public isLanguagesAndTech: boolean = false;
+  public isGithubStats: boolean = false;
 
   refreshNavUsing(url: string): void {
     console.info('Main1Component.refreshNavUsing :: url-> ' + url);
     this.isHome = (url == '');
-    console.info('Main1Component.refreshNavUsing :: this.isHome -> ' + this.isHome);
     this.isLanguagesAndTech = (url == 'languages-and-technologies');
-    console.info('Main1Component.refreshNavUsing :: this.isLanguagesAndTech -> ' + this.isLanguagesAndTech);
+    this.isGithubStats = (url == 'github-stats');
   }
 
   refreshNav(): void {
@@ -56,6 +56,14 @@ export class Main1Component implements OnInit {
 
   isOnLanguagesAndTech(): boolean {
     return this.isLanguagesAndTech == true;
+  }
+
+  isNotGithubStats(): boolean {
+    return this.isGithubStats == false;
+  }
+
+  isOnGithubStats(): boolean {
+    return this.isGithubStats == true;
   }
 
   ngOnInit(): void {

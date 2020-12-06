@@ -6,5 +6,8 @@
     <LI *ngIf="isNotLanguagesAndTech()">
       <a [routerLink]="['/languages-and-technologies']">Languages</a>
     </LI>
+    <LI *ngIf="isNotGithubStats()">
+      <a [routerLink]="['/github-stats']">Github Stats</a>
+    </LI>
   </UL>
 </div>

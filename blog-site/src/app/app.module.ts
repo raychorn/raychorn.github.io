@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
 import { Main1Component } from './components/main-pages/main1/main1.component';
 import { LanguagesTechComponent } from './components/main-pages/languages-tech/languages-tech.component';
+import { GithubStatsComponent } from './components/main-pages/github-stats/github-stats.component';
+import { SampleProjectsComponent } from './components/main-pages/sample-projects/sample-projects.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LanguagesTechComponent } from './components/main-pages/languages-tech/l
     MainContentComponent,
     SiteLayoutComponent,
     Main1Component,
-    LanguagesTechComponent
+    LanguagesTechComponent,
+    GithubStatsComponent,
+    SampleProjectsComponent
   ],
   imports: [
     BrowserModule,

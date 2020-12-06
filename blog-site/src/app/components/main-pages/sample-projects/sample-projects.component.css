@@ -1,0 +1,4 @@
+.sample-projects-wrapper {
+  display: flex;
+  flex-direction: column;
+}

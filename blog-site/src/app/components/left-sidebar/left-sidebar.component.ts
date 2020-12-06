@@ -25,11 +25,13 @@ export class LeftSidebarComponent implements OnInit {
 
   public isHome: boolean = true;
   public isLanguagesAndTech: boolean = false;
+  public isGithubStats: boolean = false;
 
   refreshNavUsing(url: string): void {
     console.info('LeftSidebarComponent.refreshNavUsing :: url-> ' + url);
     this.isHome = (url == '');
     this.isLanguagesAndTech = (url == 'languages-and-technologies');
+    this.isGithubStats = (url == 'github-stats');
   }
 
   refreshNav(): void {
@@ -46,6 +48,10 @@ export class LeftSidebarComponent implements OnInit {
 
   isNotLanguagesAndTech(): boolean {
     return this.isLanguagesAndTech == false;
+  }
+
+  isNotGithubStats(): boolean {
+    return this.isGithubStats == false;
   }
 
 
