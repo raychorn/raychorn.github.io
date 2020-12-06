@@ -1,0 +1,8 @@
+.left-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 10vw;
+  height: 90vh;
+  margin-top: 5px;
+  margin-left: 10px;
+}
