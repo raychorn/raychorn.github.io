@@ -1,7 +1,7 @@
 .main1-wrapper {
   display: flex;
   flex-direction: column;
-  border:1px solid blue;
+  border:1px solid lightblue;
   width: 100%;
 }
 
@@ -18,4 +18,11 @@
   text-align: justify;
   text-justify: inter-word;
   background-color: silver;
+}
+
+.main1-samples-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  justify-content: space-around;
 }
