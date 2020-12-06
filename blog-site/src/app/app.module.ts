@@ -10,6 +10,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { AppRoutingModule } from './app-routing.module';
 import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
 import { Main1Component } from './components/main-pages/main1/main1.component';
+import { LanguagesTechComponent } from './components/main-pages/languages-tech/languages-tech.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Main1Component } from './components/main-pages/main1/main1.component';
     RightSidebarComponent,
     MainContentComponent,
     SiteLayoutComponent,
-    Main1Component
+    Main1Component,
+    LanguagesTechComponent
   ],
   imports: [
     BrowserModule,

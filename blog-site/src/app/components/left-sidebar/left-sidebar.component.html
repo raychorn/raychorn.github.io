@@ -1,7 +1,10 @@
 <div class="left-wrapper">
   <UL>
-    <LI>
-      <a href="languages-and-technologies">Languages and Tecnologies</a>
+    <LI *ngIf="isNotHome()">
+      <a [routerLink]="['/']">Home</a>
+    </LI>
+    <LI *ngIf="isNotLanguagesAndTech()">
+      <a [routerLink]="['/languages-and-technologies']">Languages</a>
     </LI>
   </UL>
 </div>
