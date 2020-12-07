@@ -6,16 +6,24 @@
     window.languagePluginUrl = 'https://cdn.jsdelivr.net/pyodide/v0.15.0/full/';
   </script>
   <script src="https://cdn.jsdelivr.net/pyodide/v0.15.0/full/pyodide.js"></script>
+  <style>
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
-  Pyodide test page
-
-  Open your browser console to see pyodide output
+  <div class="content-wrapper">
+    <div>
+      <a href="https://github.com/iodide-project/pyodide" target="_blank">Pyodide</a> test page. <span id="info1"></span>
+    </div>
+  </div>
   <script type="text/javascript">
     languagePluginLoader.then(function () {
-      console.log(pyodide.runPython('import sys\nsys.version'));
-      console.log(pyodide.runPython('print(1 + 2)'));
+      document.getElementById('info1').innerHTML = 'Python ' + pyodide.runPython('import sys\nsys.version');
     });
   </script>
 </body>
