@@ -10,10 +10,12 @@ export class WasmSample1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    /*
     languagePluginLoader.then(function () {
       console.log(pyodide.runPython(`                  import sys                  sys.version              `));
       console.log(pyodide.runPython('print(1 + 2)'));
     });
+    */
   }
 
 }
