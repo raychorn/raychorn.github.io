@@ -67,7 +67,7 @@ export class LeftSidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.refreshNav();
-    this.isWASMSupported = false; // this.cookieService.check('wasm-support');
+    this.isWASMSupported = this.cookieService.check('wasm-support');
     console.info('LeftSidebarComponent :: this.isWASMSupported -> ' + this.isWASMSupported);
   }
 
