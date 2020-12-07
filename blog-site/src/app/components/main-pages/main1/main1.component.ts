@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
+import { CookieService } from 'src/app/services/cookie.service';
 
 @Component({
   selector: 'app-main1',
@@ -11,7 +12,7 @@ import { filter } from 'rxjs/operators';
 })
 export class Main1Component implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private cookieService: CookieService) {
     router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
@@ -26,12 +27,16 @@ export class Main1Component implements OnInit {
   public isHome: boolean = true;
   public isLanguagesAndTech: boolean = false;
   public isGithubStats: boolean = false;
+  public isWASMSample1: boolean = false;
+
+  public isWASMSupported: boolean = false;
 
   refreshNavUsing(url: string): void {
     console.info('Main1Component.refreshNavUsing :: url-> ' + url);
     this.isHome = (url == '');
     this.isLanguagesAndTech = (url == 'languages-and-technologies');
     this.isGithubStats = (url == 'github-stats');
+    this.isWASMSample1 = (url == 'wasm-sample1');
   }
 
   refreshNav(): void {
@@ -66,8 +71,18 @@ export class Main1Component implements OnInit {
     return this.isGithubStats == true;
   }
 
+  isNotWASMSample1(): boolean {
+    return this.isWASMSample1 == false;
+  }
+
+  isOnWASMSample1(): boolean {
+    return (this.isWASMSample1 == true) && (this.isWASMSupported);
+  }
+
   ngOnInit(): void {
     this.refreshNav();
+    this.isWASMSupported = this.cookieService.check('wasm-support');
+    console.info('Main1Component :: this.isWASMSupported -> ' + this.isWASMSupported);
   }
 
 }

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CookieService } from './services/cookie.service';
 
+declare let languagePluginLoader: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

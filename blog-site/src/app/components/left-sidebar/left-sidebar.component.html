@@ -9,5 +9,8 @@
     <LI *ngIf="isNotGithubStats()">
       <a [routerLink]="['/github-stats']">Github Stats</a>
     </LI>
+    <LI *ngIf="isNotWASMSample1()">
+      <a [routerLink]="['/wasm-sample1']">WASM Sample 1</a>
+    </LI>
   </UL>
 </div>

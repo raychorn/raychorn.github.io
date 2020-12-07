@@ -16,6 +16,7 @@ import { SampleProjectsComponent } from './components/main-pages/sample-projects
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { WasmSample1Component } from './components/main-pages/wasm-sample1/wasm-sample1.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     Main1Component,
     LanguagesTechComponent,
     GithubStatsComponent,
-    SampleProjectsComponent
+    SampleProjectsComponent,
+    WasmSample1Component
   ],
   imports: [
     BrowserModule,
