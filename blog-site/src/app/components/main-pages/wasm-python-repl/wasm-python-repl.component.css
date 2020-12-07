@@ -1,0 +1,8 @@
+.wasm-python-repl-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wasm-python-repl-wrapper iframe {
+  height: 400px;
+}
