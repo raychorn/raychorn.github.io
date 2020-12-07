@@ -13,6 +13,9 @@ import { Main1Component } from './components/main-pages/main1/main1.component';
 import { LanguagesTechComponent } from './components/main-pages/languages-tech/languages-tech.component';
 import { GithubStatsComponent } from './components/main-pages/github-stats/github-stats.component';
 import { SampleProjectsComponent } from './components/main-pages/sample-projects/sample-projects.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { SampleProjectsComponent } from './components/main-pages/sample-projects
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
