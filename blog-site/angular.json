@@ -21,6 +21,10 @@
             "aot": true,
             "assets": [
               "src/assets/favicon.ico",
+              "src/BingSiteAuth.xml",
+              "src/google69b82fc4fb330fce.html",
+              "src/robots.txt",
+              "src/sitemap.xml",
               "src/assets"
             ],
             "styles": [
