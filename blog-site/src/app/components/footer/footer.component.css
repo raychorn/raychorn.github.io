@@ -1,9 +1,29 @@
 .footer-wrapper {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 100vw;
-  height: 2vh;
   margin-top: 5px;
   margin-left: 10px;
-  justify-content: space-around;
+}
+
+.footer-wrapper div {
+  width: 250px;
+}
+
+@media only screen and (max-width: 640px) {
+  .footer-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-wrapper > div {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .footer-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer-wrapper > div {
+    padding: 0px;
+  }
 }
