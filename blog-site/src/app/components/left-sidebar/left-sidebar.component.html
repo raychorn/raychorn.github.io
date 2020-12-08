@@ -4,22 +4,22 @@
       <div class="dropdown-content">
         <UL id="dropdown-menu-list">
           <LI *ngIf="isNotHome()">
-            <a [routerLink]="['/']">Home</a>
+            <a [routerLink]="['']">Home</a>
           </LI>
           <LI *ngIf="isNotLanguagesAndTech()">
-            <a [routerLink]="['/languages-and-technologies']">Languages</a>
+            <a [routerLink]="['languages-and-technologies']">Languages</a>
           </LI>
           <LI *ngIf="isNotGithubStats()">
-            <a [routerLink]="['/github-stats']">Github Stats</a>
+            <a [routerLink]="['github-stats']">Github Stats</a>
           </LI>
           <LI *ngIf="isNotWASMSample1()">
-            <a [routerLink]="['/wasm-sample1']">WASM Sample 1</a>
+            <a [routerLink]="['wasm-sample1']">WASM Sample 1</a>
           </LI>
           <LI *ngIf="isNotWASMREPL1()">
-            <a [routerLink]="['/wasm-repl1']">WASM Python REPL</a>
+            <a [routerLink]="['wasm-repl1']">WASM Python REPL</a>
           </LI>
           <LI *ngIf="isNotWASMDev1()">
-            <a [routerLink]="['/wasm-dev1']">WASM Python Dev</a>
+            <a [routerLink]="['wasm-dev1']">WASM Python Dev</a>
           </LI>
         </UL>
       </div>
