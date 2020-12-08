@@ -29,6 +29,7 @@ export class Main1Component implements OnInit {
   public isGithubStats: boolean = false;
   public isWASMSample1: boolean = false;
   public isWASMRELP1: boolean = false;
+  public isWASMDev1: boolean = false;
 
   public isWASMSupported: boolean = false;
 
@@ -39,6 +40,7 @@ export class Main1Component implements OnInit {
     this.isGithubStats = (url == 'github-stats');
     this.isWASMSample1 = (url == 'wasm-sample1');
     this.isWASMRELP1 = (url == 'wasm-repl1');
+    this.isWASMDev1 = (url == 'wasm-dev1');
   }
 
   refreshNav(): void {
@@ -83,6 +85,10 @@ export class Main1Component implements OnInit {
 
   isOnWASMREPL1(): boolean {
     return (this.isWASMRELP1 == true) && (this.isWASMSupported);
+  }
+
+  isOnWASMDev1(): boolean {
+    return (this.isWASMDev1 == true) && (this.isWASMSupported);
   }
 
   ngOnInit(): void {

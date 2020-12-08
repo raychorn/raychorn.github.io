@@ -18,6 +18,9 @@
           <LI *ngIf="isNotWASMREPL1()">
             <a [routerLink]="['/wasm-repl1']">WASM Python REPL</a>
           </LI>
+          <LI *ngIf="isNotWASMDev1()">
+            <a [routerLink]="['/wasm-dev1']">WASM Python Dev</a>
+          </LI>
         </UL>
       </div>
     </div>

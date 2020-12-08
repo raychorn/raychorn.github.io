@@ -1,0 +1,4 @@
+.wasm-dev-one-wrapper {
+  display: flex;
+  flex-direction: column;
+}

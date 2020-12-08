@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        window.languagePluginUrl = 'https://cdn.jsdelivr.net/pyodide/v0.15.0/full/';
+    </script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.15.0/full/pyodide.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style type="text/css" media="screen">
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        #dev-editor-info {
+          display: flex;
+          flex-direction: row;
+        }
+
+        #editor-controls {
+          display: flex;
+          flex-direction: row;
+        }
+
+      #editor {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        height: 300px;
+      }
+
+      #info {
+        width: 40%;
+        height: 300px;
+        background-color: white;
+      }
+
+      @media only screen and (max-width: 1000px) {
+      }
+
+      @media only screen and (max-width: 640px) {
+        #dev-editor-info {
+          flex-direction: column;
+        }
+
+        #editor {
+          width: 80%;
+          height: 150px;
+        }
+
+        #info {
+          width: 80%;
+          height: 150px;
+          background-color: white;
+        }
+      }
+
+      @media only screen and (max-width: 440px) {
+        #dev-editor-info {
+          flex-direction: column;
+        }
+
+        #editor {
+          width: 80%;
+          height: 150px;
+        }
+
+        #info {
+          width: 80%;
+          height: 150px;
+          background-color: white;
+        }
+      }
+
+      .importantButtonStyle {
+        color: black !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: lightsalmon;
+        padding: 10px;
+        border-radius: 5px;
+        display: inline-block;
+        border: none;
+        transition: all 0.4s ease 0s;
+      }
+
+      .importantButtonStyle:hover {
+        background: #c8aef1;
+        letter-spacing: 1px;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+        transition: all 0.4s ease 0s;
+      }
+
+  </style>
+  <script>
+    $(document).ready(function () {
+        $('#btn_run').click();
+        $("#btn_run").click(function () {
+          console.log("RUN!");
+          try {
+            $('#info1').html(pyodide.runPython(editor.getSession().getValue()));
+          } catch (e) {
+            alert(e);
+          }
+        });
+        console.log("ready!");
+      });
+  </script>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <div id="editor-controls">
+            <div>
+              <a href="https://github.com/iodide-project/pyodide" target="_blank">Pyodide</a> development page.
+            </div>
+            <div>
+              <button class="importantButtonStyle" id="btn_run">Run</button>
+            </div>
+        </div>
+        <div id="dev-editor-info">
+          <div id="editor">
+          </div>
+          <hr>
+          <div id="info1">
+          </div>
+        </div>
+    </div>
+    <script src="https://pagecdn.io/lib/ace/1.4.12/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      ace.config.set('basePath', '/assets/js/src-min-noconflict');
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/monokai");
+      editor.session.setMode("ace/mode/python");
+    </script>
+    <script type="text/javascript">
+        languagePluginLoader.then(function () {
+            $('#info1').html('Python ' + pyodide.runPython('import sys\nsys.version'));
+        });
+    </script>
+</body>
+
+</html>

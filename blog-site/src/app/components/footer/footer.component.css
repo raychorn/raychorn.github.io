@@ -10,6 +10,15 @@
   width: 250px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .footer-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer-wrapper > div {
+    padding: 0px;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .footer-wrapper {
     grid-template-columns: repeat(2, 1fr);

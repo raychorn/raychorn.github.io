@@ -19,6 +19,7 @@ const routes: Routes = [
       { path: 'github-stats', component: GithubStatsComponent, pathMatch: 'full' },
       { path: 'wasm-sample1', component: WasmSample1Component, pathMatch: 'full' },
       { path: 'wasm-repl1', component: WasmPythonReplComponent, pathMatch: 'full' },
+      { path: 'wasm-dev11', component: WasmPythonReplComponent, pathMatch: 'full' },
     ]
   },
   { path: '**', redirectTo: '' }

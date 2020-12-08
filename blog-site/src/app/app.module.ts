@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { WasmSample1Component } from './components/main-pages/wasm-sample1/wasm-sample1.component';
 import { WasmPythonReplComponent } from './components/main-pages/wasm-python-repl/wasm-python-repl.component';
+import { WasmDev1Component } from './components/main-pages/wasm-dev1/wasm-dev1.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { WasmPythonReplComponent } from './components/main-pages/wasm-python-rep
     GithubStatsComponent,
     SampleProjectsComponent,
     WasmSample1Component,
-    WasmPythonReplComponent
+    WasmPythonReplComponent,
+    WasmDev1Component
   ],
   imports: [
     BrowserModule,
