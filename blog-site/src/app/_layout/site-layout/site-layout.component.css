@@ -1,3 +1,3 @@
 .site-layout-wrapper {
-  border:1px solid lightblue;
+  z-index: 1;
 }
