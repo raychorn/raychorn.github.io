@@ -7,21 +7,35 @@
     </script>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.15.0/full/pyodide.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <style type="text/css" media="screen">
+    <style type="text/css">
         .content-wrapper {
             display: flex;
             flex-direction: column;
             width: 100%;
         }
 
+        #dev-editor-wrapper {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          width: 100%;
+        }
+
+        #dev-importer {
+          display: flex;
+          flex-direction: row;
+        }
+
         #dev-editor-info {
           display: flex;
           flex-direction: row;
+          width: 100%;
         }
 
         #editor-controls {
           display: flex;
           flex-direction: row;
+          justify-content: space-around;
         }
 
       #editor {
@@ -99,8 +113,9 @@
 
   </style>
   <script>
+    var micropip_imported = false;
+
     $(document).ready(function () {
-        $('#btn_run').click();
         $("#btn_run").click(function () {
           console.log("RUN!");
           try {
@@ -109,6 +124,34 @@
             alert(e);
           }
         });
+        $("#btn_import").click(function () {
+          pkg_name = $('#input_importer').val();
+          console.log("IMPORT " + (pkg_name != 'micropip' ? pkg_name : '') + "!");
+          try {
+            $('#info1').html(pyodide.loadPackage([pkg_name]));
+          } catch (e) {
+            alert(e);
+          }
+        });
+
+        if (!micropip_imported) {
+          $('#input_importer').val('micropip');
+        }
+
+        function myCustomLog(msg) {
+          if (msg.indexOf('Loaded micropip') > -1) {
+            micropip_imported = true;
+            $('#input_importer').val('');
+          }
+          $('#info1').html(msg);
+        }
+        window.console.log = myCustomLog;
+
+        function myCustomErrorLog(msg) {
+          alert(msg);
+        }
+        window.console.error = myCustomErrorLog;
+
         console.log("ready!");
       });
   </script>
@@ -121,7 +164,9 @@
               <a href="https://github.com/iodide-project/pyodide" target="_blank">Pyodide</a> development page.
             </div>
             <div>
-              <button class="importantButtonStyle" id="btn_run">Run</button>
+              <input id="input_importer" width="100px" maxlength="1000" style="display: none;">
+              <button class="importantButtonStyle" id="btn_import" style="display: none;">Import</button>
+              <button class="importantButtonStyle" id="btn_run" style="display: none;">Run</button>
             </div>
         </div>
         <div id="dev-editor-info">
@@ -142,6 +187,9 @@
     <script type="text/javascript">
         languagePluginLoader.then(function () {
             $('#info1').html('Python ' + pyodide.runPython('import sys\nsys.version'));
+            $('#btn_run').show();
+            $('#btn_import').show();
+            $('#input_importer').show();
         });
     </script>
 </body>

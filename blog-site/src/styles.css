@@ -1,23 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-  @font-face {
+@font-face {
     font-family: 'Grenze_Gotisch';
     src: url('/assets/fonts/Grenze_Gotisch/GrenzeGotisch-VariableFont_wght.ttf')  format('truetype');
 }
 
-  @font-face {
+@font-face {
     font-family: 'Lemonada';
     src: url('/assets/fonts/Lemonada/Lemonada-VariableFont_wght.ttf')  format('truetype');
 }
 
+@font-face {
+    font-family: 'Exo2';
+    src: url('/assets/fonts/Exo_2/Exo2-Thin.ttf')  format('truetype');
+}
+
+
 :root {
-    font-family: 'Lemonada';
-    font-size: 0.8rem;
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --transition-speed: 600ms;
 }
+
+* {
+    font-family: 'Exo2' !important;
+    font-size: 0.9rem;
+  }
 
 body {
     color: black;
