@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Dynamic Pluggable Microservice Framework",
+    "description": "Stop coding Microservice RESTful Interfaces by hand and start doing this automatically using this framework. Automation frees us from the tediousness of common everyday activities. This framework frees everyone from the most tedious part of the publishing function as RESTful AJAX calls. Now you can focus all your efforts on producing Python Modules with easy to understand function decorators to “expose” endpoints.",
+    "url": "https://medium.com/swlh/dynamic-pluggable-microservice-framework-83ddc4b3d26e?source=friends_link&sk=a15f62ea8787d53193d7436ba4daea5b"
+  },
+  {
+    "id": 2,
+    "name": "Let’s Make REST Into a Protocol",
+    "description": "Every single part of every single REST API is 100% the same except for the function dangling at the end of each and every RESTful Endpoint.",
+    "url": "https://medium.com/swlh/lets-make-rest-into-a-protocol-76d8deddcd79?source=friends_link&sk=40231db98b7d8fe51a6ad413a4986cc3"
+  },
+  {
+    "id": 3,
+    "name": "Let’s fix Python 3 Context Managers",
+    "description": "Nested Context Managers do not work in Python 3 but we can fix this.",
+    "url": "https://medium.com/python-in-plain-english/lets-fix-python-3-context-managers-167e8745b8b2?source=friends_link&sk=76723c90f00e1b8afba469d4c7966d8a"
+  },
+  {
+    "id": 4,
+    "name": "Balancing Python",
+    "description": "Natural Language Processing and Machine Learning combine to resolve a programming challenge. Can we auto-correct this, please?",
+    "url": "https://medium.com/python-in-plain-english/is-this-balanced-algorithm-in-python-a2ee4ad66401?source=friends_link&sk=b4724a7ebf48f7bc04cea39a65590f9e"
+  },
+  {
+    "id": 5,
+    "name": "How To Choose A Python Version For Your Virtual Environments",
+    "description": "Automate your Python Environments and open-up you ability to do your project any way you want.",
+    "url": "https://medium.com/python-in-plain-english/how-to-choose-a-python-version-for-your-virtual-environments-32d46b48c0e8?source=friends_link&sk=4758e3076e31317895b1033f996461ae"
+  },
+  {
+    "id": 6,
+    "name": "Develop Python Code in your Browser",
+    "description": "This is a real story about a real Python Development Environment you can run in your browser.  Only the names were changed to protect the innocent.",
+    "url": "https://medium.com/dynamic-python/wasm-makes-python-secure-931559e09ee3?source=friends_link&sk=6879721b4149a3f84fd6a091faf8fbf0"
+  },
+  {
+    "id": 7,
+    "name": "Bashing Python Builds",
+    "description": "Use bash to make your virtual environments do Python.",
+    "url": "https://medium.com/python-in-plain-english/bashing-python-builds-81c30a75b7d6?source=friends_link&sk=c7b0dd8ad84c51a54130136189803e10"
+  },
+  {
+    "id": 8,
+    "name": "Automate MongoDB for Docker",
+    "description": "Docker DNS using .env files.",
+    "url": "https://medium.com/python-in-plain-english/automate-mongodb-for-docker-34d850c13e9c?source=friends_link&sk=1cc1bc631bfdec67aa14c26effdbc641"
+  },
+  {
+    "id": 9,
+    "name": "Automating URL creation in Django",
+    "description": "Develop one URL for them all.  Use automation to reduce your development debt. This also makes your API Server more secure.",
+    "url": "https://medium.com/python-in-plain-english/automating-url-creation-in-django-6b93dd64f711?source=friends_link&sk=f5c6a5ae8edb2f3e96f7066d6cb6a9fb"
+  },
+  {
+    "id": 10,
+    "name": "Correctly Sized Docker Containers",
+    "description": "In this article, we will examine how to correctly size our Docker Containers to ensure a successful deployment while testing prior to deployment.",
+    "url": "https://medium.com/python-in-plain-english/correctly-sized-docker-containers-688222ce301c?source=friends_link&sk=ae4e7809f6a41963db96ce537aa531f0"
+  },
+  {
+    "id": 11,
+    "name": "What is Functional Encryption? (Part 1)",
+    "description": "Learn how to hide your secret data in plain sight by combining encryption with functional encryption.",
+    "url": "https://medium.com/python-in-plain-english/what-is-functional-encryption-749bc169c178?source=friends_link&sk=3369adc12e2706a7abe85daec610d111"
+  },
+  {
+    "id": 12,
+    "name": "What is Functional Encryption? (Part 2)",
+    "description": "Everybody loves a crazy idea that works.",
+    "url": "https://medium.com/python-in-plain-english/what-is-functional-encryption-part-2-8e312c2e1515?source=friends_link&sk=8e009c10a4c8069e53c00db73a79daac"
+  },
+  {
+    "id": 13,
+    "name": "What is Functional Encryption? (Part 3)",
+    "description": "In this article, we slice data to make it more secure.",
+    "url": "https://medium.com/python-in-plain-english/what-is-functional-encryption-cf98190df6b7?source=friends_link&sk=5f8c9b8eecac1d1d734d12cb667f7326"
+  },
+  {
+    "id": 14,
+    "name": "Build your own Social Network, NOW!",
+    "description": "If you wanted to build your own SOcial Network you would need the ability to quickly build and deploy Microservices aka. RESTful APIs.",
+    "url": "https://medium.com/dynamic-python/build-your-own-social-network-now-e658a11f9ed9?source=friends_link&sk=c695b90c4f2eee7d1f91f411bd4ea395"
+  },
+  {
+    "id": 15,
+    "name": "More Functional Encryption in Python",
+    "description": "In this article, we will take a look at how we can hide encrypted data or parts of encrypted messages inside uuid-looking values hackers will overlook.",
+    "url": "https://medium.com/python-in-plain-english/more-functional-encryption-in-python-aa7d60695136?source=friends_link&sk=4dfda3eee5accf686eb1eb7e45565aae"
+  }
+]

@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Running..."
-ng serve --host 0.0.0.0 --port 8088
+ng serve --host 0.0.0.0 --port 8888 #--open
